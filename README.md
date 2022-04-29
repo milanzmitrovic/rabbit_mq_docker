@@ -4,4 +4,6 @@
 
 #### Is can be used for testing purpose and experimenting
 
-#### Ptrhon_folder contains consumer and producer workers, while mq_folder contains docker-compose and docker file that build RabbitMQ instance
+#### Ptrhon_folder contains consumer and producer workers
+
+#### mq_folder contains docker-compose and docker file that build RabbitMQ instance
