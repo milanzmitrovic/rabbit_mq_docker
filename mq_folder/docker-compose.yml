@@ -1,0 +1,22 @@
+
+# Root file path i.e. current working directory is determined by place where docker-compose.yml file is stored.
+
+version: "3.2"
+services:
+  rabbit_mq:
+    image: rabbitmq:3.8-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=myuser
+      - RABBITMQ_DEFAULT_PASS=mypassword
+    container_name: "rabbitmq_test_env"
+#    outside_world: within_docker
+    ports:
+        - 5674:5672
+        - 15674:15672
+
+#    outside_world: within_docker
+    volumes:
+        - ../mq_folder_data_volumes/data/:/var/lib/rabbitmq/
+        - ../mq_folder_data_volumes/log/:/var/log/rabbitmq
+
+
